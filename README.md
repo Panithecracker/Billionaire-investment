@@ -21,8 +21,9 @@ All computations are assumed to be exact (no rounding), but give your answer rou
 In order to allow others to enjoy the experience of solving the problem by themsleves, one can only see the quantitative answer with 12 digits of precision printed on screen when executing the main program. On the other hand, I decided to visualize the results obtained after coming up with the solution by graphing a function that I derived, which tells you the minimum number of heads needed
 
 
-![2023-05-29 1](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/350a62c8-92d8-4a65-b71f-65b75e133318)
-
-![2023-05-29 2](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/f5fcef08-373f-46cb-a21a-426d45e3a71e)
 ![2023-05-29](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/bac57965-2ec4-4c51-9de8-a0152a5e5644)
+
+![2023-05-29 2](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/22337ccb-db2e-4d94-90c6-9e8e4681c679)
+
+![2023-05-29 1](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/350a62c8-92d8-4a65-b71f-65b75e133318)
 
