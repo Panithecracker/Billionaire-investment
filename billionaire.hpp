@@ -65,9 +65,11 @@ vector<int> RandomSequence(int size)
     return rsequence;
 }
 
-int MinHeads(double f) //this function depends on a proportion f, and returns the min number of heads to make for a given f , at least a billion 
+int MinHeads(double f, double c) //this function depends on a proportion f, and returns the min number of heads to make for a given f ,at least c units of money
 {
-    return ceil((9.0*log(10.0) - 1000.0*log(1.0-f))/(log(1.0+2.0*f) - log(1.0-f)));
+    //f:fixed proportion before starting the game
+    //c:minimum capital to make
+    return ceil((log(c) - 1000*log(1-f))/(log(1 + 2*f) - log(1-f)));
 }
 
 
@@ -91,27 +93,34 @@ long long nchoosek(int n, int k) {
 
 
 //define your function here : 
-double f(double x)
+double f(double x, double c)
 {
-    return 1000*(1+2*x)*log((1+2*x)/(1-x)) +3000*log(1-x)-27*log(10);
+    //function whose roots wants to be found must be expressed below:
+    //x : fixed proportion before starting the game
+    //c : minimum capoital to make
+    return ((-2*pow(x,2.0) + (2000*c + 1)*x +1000*c +1)*log(1 + 2*x) + (2*pow(x,2.0) - (2000*c +1)*x +2000*c-1)*log(1 - x) -3*c*log(c) );
 }
 
 //numerical derivative of the specified function f above
 
-double fp(double x, double delta ) //evaluates the num derivative of f using a delta as parameter
+double fp(double x, double delta , double c) //evaluates the num derivative of f using a delta as parameter
 {
-    return (f(x+delta)-f(x))/(delta);
+    return (f(x+delta, c)-f(x,c))/(delta);
 }
 
 //function that performs the newton raphson algorithm (numerically) up to a limit amount of iterations
 
-double NewtonRaphson(double guess, int iters, double delta)
+double NewtonRaphson(double guess, int iters, double delta, double c)
 {
+    //guess : initial root estimate
+    //iter : # of iterations to do
+    //delta: step size for derivative estimate
+    //c: minimum capital to make
     for(int i = 0; i<iters ; ++i)
     {
-        double d = fp(guess,delta);
+        double d = fp(guess,delta, c);
         if( d!= 0){
-            guess -= (f(guess))/(d);
+            guess -= (f(guess, c))/(d);
         }else{
             break;
         }
