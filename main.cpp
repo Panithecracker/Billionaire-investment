@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 
-    // Step 1 : Compute the value of f that minimizes the amount of heads needed to make at least a billion dollars
+    // Computing the value of f that minimizes the amount of heads needed to make at least a billion dollars
     //minimum capital to make is c:
     //for the specific problem it is a billion, however it works with any other value
     double c = pow(10.0,9.0);
