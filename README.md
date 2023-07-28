@@ -12,9 +12,15 @@ Choosing f to maximize your chances of having at least £1,000,000,000 after 1,0
 In order to allow others to enjoy the experience of solving the problem by themselves, one can only see the quantitative answer with 12 digits of precision printed on screen when executing the main program. On the other hand, I decided to visualize the results obtained after coming up with the solution by graphing a function that I derived, which tells you the minimum number of heads needed (yes, even though it feels counterintuitive it turns
 out that order doesnt matter if that makes any sense🫢). I also plotted a function relating proportions and respective minimum number of heads for making more than a billion as well as a 3d plot relating proportion, heads seen and resulting capital after 1000 tosses.
 
+### Plot 1: Probability as a function of proportion
 ![2023-05-29 2](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/22337ccb-db2e-4d94-90c6-9e8e4681c679)
 
+### Plot 2: Minimum heads needed as a function of proportion
 ![2023-05-29](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/bac57965-2ec4-4c51-9de8-a0152a5e5644)
 
+### Plot 3: Final capital as a function of proportion and heads seen after 1000 tosses
 ![2023-05-29 1](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/350a62c8-92d8-4a65-b71f-65b75e133318)
+
+
+
 
