@@ -18,7 +18,7 @@ out that order doesnt matter if that makes any sense🫢). I also plotted a func
 ### Plot 2: Minimum heads needed as a function of proportion
 ![2023-05-29](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/bac57965-2ec4-4c51-9de8-a0152a5e5644)
 
-### Plot 3: Final capital as a function of proportion and heads seen after 1000 tosses
+### Plot 3: Final capital as a function of proportion and heads seen after 1000 tosses (z-axis in log scale)
 ![2023-05-29 1](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/350a62c8-92d8-4a65-b71f-65b75e133318)
 
 
