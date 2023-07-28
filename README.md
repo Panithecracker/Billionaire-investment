@@ -10,7 +10,7 @@ Choosing f to maximize your chances of having at least £1,000,000,000 after 1,0
 
 # Solution :
 In order to allow others to enjoy the experience of solving the problem by themselves, one can only see the quantitative answer with 12 digits of precision printed on screen when executing the main program. On the other hand, I decided to visualize the results obtained after coming up with the solution by graphing a function that I derived, which tells you the minimum number of heads needed (yes, even though it feels counterintuitive it turns
-out that order doesnt matter if that makes any sense🫢)
+out that order doesnt matter if that makes any sense🫢). I also plotted a function relating proportions and respective probabilities for each as well as a 3d plot
 
 
 ![2023-05-29](https://github.com/Panithecracker/Billionaire-investment/assets/97905110/bac57965-2ec4-4c51-9de8-a0152a5e5644)
