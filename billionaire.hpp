@@ -10,6 +10,7 @@ using namespace std;
 
 void Play_Game(vector<int> sequence, double f) //Naive way to compute the resulting capital for a given sequence and proportion
 {
+    //useful to play and become familiar with the problem allowing me to conjecture some interesting claims.
     double capital = 1.0;
     double bet;
     for(int i = 0; i<sequence.size(); i++)
@@ -32,7 +33,7 @@ void Play_Game(vector<int> sequence, double f) //Naive way to compute the result
     cout << "\nRESULTING CAPITAL -> " << capital << endl;
 }
 
-double CountHeads(vector<int> sequence)
+double CountHeads(vector<int> sequence) //counts the amount of heads (wins) seen on a 1000toss sequence
 {
     double count = 0.0;
     for(int i = 0; i<sequence.size(); ++i)
@@ -45,14 +46,16 @@ double CountHeads(vector<int> sequence)
     return count;
 }
 
-double FinalCapital(vector<int> sequence, double f)
+double FinalCapital(vector<int> sequence, double f) //after some work, I derived this formula!
 {
+    // notice that surprisingly, the final capital has turned out to depend only on the amount of heads , ignoring the order in which these appeared (that was really neat to discover)!
+    // if you dont believe me, test this claim with the PlayGame function in the beginning!
     int heads = CountHeads(sequence);
     int tails = sequence.size()-heads;
     return (pow((1+2*f),heads))*(pow(1-f,tails)); //this formula is incredibly useful and its discovery was key...
 }
 
-vector<int> RandomSequence(int size)
+vector<int> RandomSequence(int size) //initializes a random 1000 toss results sequence 
 {
     vector<int> rsequence;
     random_device rd;
@@ -73,13 +76,13 @@ int MinHeads(double f, double c) //this function depends on a proportion f, and 
 }
 
 
-vector<int> ones_and_zeros(int n, int s) {
+vector<int> ones_and_zeros(int n, int s) { //returns a sequence with n ones
     vector<int> result(s, 0);
     fill(result.begin(), result.begin() + n, 1);
     return result;
 }
 
-long long nchoosek(int n, int k) {
+long long nchoosek(int n, int k) { 
     if (k > n || k < 0) {
         return 0;
     }
@@ -132,7 +135,7 @@ double NewtonRaphson(double guess, int iters, double delta, double c)
 
 //first, define the pmf recursively
 
-double binomial_pmf(int n, double p, int x)
+double binomial_pmf(int n, double p, int x) //defining the binomial random variable probability mass function recursively
 {
     //base case:
     if (x == 0)
@@ -142,7 +145,7 @@ double binomial_pmf(int n, double p, int x)
 
 }
 
-double binomial_cdf(int n, double p, int x)
+double binomial_cdf(int n, double p, int x) //cumulative distribution function respectively 
 {
     //Base case:
     if (x == 0)
